@@ -35,3 +35,10 @@ export function binarySearch(array, num) {
     }
     return false;
 }
+
+export function nthFibonacci(n, cn = 0, val = 0, pval = 0) {
+    if (n == cn) return pval;
+    // console.log(cn, val, pval);
+    if (val == 0) val++;
+    return nthFibonacci(n, cn + 1, val + pval, val);
+}
